@@ -25,10 +25,12 @@ function TodoItem({
             borderRadius="md"
             bgColor="white"
         >
-            <Checkbox checked={item.completed} onChange={toggleCompleted} />
-            <Text textDecoration={item.completed ? 'line-through' : ''}>
-                {item.title}
-            </Text>
+            <Flex gap={2}>
+                <Checkbox checked={item.completed} onChange={toggleCompleted} />
+                <Text textDecoration={item.completed ? 'line-through' : ''}>
+                    {item.title}
+                </Text>
+            </Flex>
             <CloseButton onClick={() => remove(id)} />
         </Flex>
     );
